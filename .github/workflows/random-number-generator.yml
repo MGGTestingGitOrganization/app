@@ -10,10 +10,9 @@ jobs:
       number: ${{ steps.generate-number.outputs.number }}
     steps:
       - id: generate-number
-      run: echo "number=$(echo $RANDOM)" >> "$GITHUB_OUTPUT"
+        run: echo "number=$(echo $RANDOM)" >> "$GITHUB_OUTPUT"
   consumer-of-generator:
     needs: random-number-generator
     runs-on: ubuntu-latest
     steps:
       - run: echo "The number is ${{ needs.random-number-generator.outputs.number }}"
-
