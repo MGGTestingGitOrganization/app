@@ -1,0 +1,14 @@
+name: Node Version in a container
+run-name: Node Version in a container - Run by ${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  node_job:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22
+    steps:
+      - name: Run a command
+        run: node --version
