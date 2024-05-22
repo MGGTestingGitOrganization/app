@@ -55,7 +55,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "<${{ github.event.repository.html_url || github.event.repository.pulls_url }}|View Commit>"
+                    "text": "<${{ github.event.repository.statuses_url || github.event.repository.pulls_url }}|View Commit>"
                   }
                 }
               ]
