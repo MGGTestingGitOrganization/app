@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 });
 
 const server = app.listen(3000, () => {
-  var test = "just a test of linter";
+  const test = "just a test of linter";
   console.log("Server running on port 3000");
 });
 
