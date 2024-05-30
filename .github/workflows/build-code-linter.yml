@@ -35,4 +35,4 @@ jobs:
           eslint: true
           prettier: true
           github_token: ${{ steps.generate_token.outputs.token }}
-          auto_fix: true
+          auto_fix: false
