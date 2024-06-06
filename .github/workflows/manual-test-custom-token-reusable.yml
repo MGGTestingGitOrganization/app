@@ -10,6 +10,8 @@ jobs:
   get-token:
     name: token
     uses: MGGTestingGitOrganization/GHA.Private.Templates/.github/workflows/gha.workflows.manual-test-reusable-oidc-token.yml@main
+    permissions:
+      id-token: write
     with:
       audience: ${{ inputs.audience}}
   
