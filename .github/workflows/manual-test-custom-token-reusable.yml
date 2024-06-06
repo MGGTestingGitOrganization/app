@@ -1,0 +1,15 @@
+name: Custom token
+on:
+  workflow_dispatch:
+    inputs:
+      audience:
+        type: string
+        required: true
+        default: GabyCustomAudience test
+jobs:
+  get-token:
+    name: token
+    uses: MGGTestingGitOrganization/GHA.Private.Templates/.github/workflows/gha.workflows.manual-test-reusable-oidc-token.yml@main
+    with:
+      audience: ${{ inputs.audience}}
+  
